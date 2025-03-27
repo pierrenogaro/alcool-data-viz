@@ -56,7 +56,7 @@ export const Other = () => {
 
     const fetchUserCount = async () => {
         try {
-            const response = await fetch('http://localhost:8081/auth/count');
+            const response = await fetch('https://alcool-api.pierrenogaro.com/auth/count');
             const data = await response.json();
 
             setUserData({
@@ -74,11 +74,11 @@ export const Other = () => {
         } catch (error) {
             console.error('Error fetching user count:', error);
             try {
-                const response = await fetch('http://localhost:8081/alcools/all');
+                const response = await fetch('https://alcool-api.pierrenogaro.com/alcools/all');
                 const alcoholsData = await response.json();
 
                 const allCommentsPromises = alcoholsData.map(alcohol =>
-                    fetch(`http://localhost:8081/alcools/${alcohol._id}`)
+                    fetch(`https://alcool-api.pierrenogaro.com/alcools/${alcohol._id}`)
                         .then(res => res.json())
                 );
 
@@ -116,13 +116,13 @@ export const Other = () => {
     const fetchAlcoholsWithComments = async () => {
         try {
             setLoading(true);
-            const response = await fetch('http://localhost:8081/alcools/all');
+            const response = await fetch('https://alcool-api.pierrenogaro.com/alcools/all');
             const alcoholsData = await response.json();
 
             const alcoholsWithComments = await Promise.all(
                 alcoholsData.map(async (alcohol) => {
                     try {
-                        const commentResponse = await fetch(`http://localhost:8081/alcools/${alcohol._id}`);
+                        const commentResponse = await fetch(`https://alcool-api.pierrenogaro.com/alcools/${alcohol._id}`);
                         const alcoholDetails = await commentResponse.json();
                         return {
                             name: alcohol.name,

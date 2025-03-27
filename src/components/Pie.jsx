@@ -18,7 +18,7 @@ export const PieChart = () => {
     useEffect(() => {
         const fetchAlcohols = async () => {
             try {
-                const response = await fetch('http://localhost:8081/alcools/all');                const alcohols = await response.json();
+                const response = await fetch('https://alcool-api.pierrenogaro.com/alcools/all');                const alcohols = await response.json();
                 const typeCount = {};
                 alcohols.forEach(alcohol => {
                     const type = alcohol.name.split(' ')[0] || 'Other';

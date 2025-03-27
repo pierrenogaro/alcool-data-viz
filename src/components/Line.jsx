@@ -37,7 +37,7 @@ export const LineGraph = () => {
     useEffect(() => {
         const fetchAlcohols = async () => {
             try {
-                const response = await fetch('http://localhost:8081/alcools/all');                const alcohols = await response.json();
+                const response = await fetch('https://alcool-api.pierrenogaro.com/alcools/all');                const alcohols = await response.json();
                 const labels = alcohols.map(alcohol => alcohol.name);
                 const degrees = alcohols.map(alcohol => parseFloat(alcohol.degree));
 
