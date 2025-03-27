@@ -49,6 +49,12 @@ export const Home = () => {
                 <div className="col">
                     <h1 className="display-4 fw-bold">Alcohol Dashboard</h1>
                     <p className="lead mb-4">Select a Chart Type or View Other Statistics</p>
+                    <a href="https://frontend-alcool.pierrenogaro.com/"
+                       className="btn btn-primary mb-4 px-4 py-2 rounded-pill shadow"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        🍷 Explore Alcohol Collection
+                    </a>
                     <hr className="mx-auto" style={{ width: '50px', height: '3px', opacity: '1' }} />
                 </div>
             </div>
