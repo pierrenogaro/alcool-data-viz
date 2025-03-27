@@ -4,6 +4,8 @@ import { BarChart } from './components/Bar'
 import { PieChart } from './components/Pie'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from "./pages/Home.jsx";
+import './App.css'
+import Other from "./components/Other.jsx";
 
 function App() {
     return (
@@ -16,6 +18,7 @@ function App() {
                         <Route path="/line" element={<LineGraph />} />
                         <Route path="/bar" element={<BarChart />} />
                         <Route path="/pie" element={<PieChart />} />
+                        <Route path="/other" element={<Other />} />
                     </Routes>
                 </div>
             </div>

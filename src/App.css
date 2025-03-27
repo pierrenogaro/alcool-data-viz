@@ -1,3 +1,7 @@
+body {
+  background-color: rgba(179, 179, 179, 0.75);
+}
+
 .App {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
